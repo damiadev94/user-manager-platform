@@ -1,10 +1,9 @@
+const router = require("./routes/index")
 const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send("User Manager API")
-})
+app.use("/", (req, res) => {router(req, res)})
 
 const PORT = process.env.PORT || 3000;
 
